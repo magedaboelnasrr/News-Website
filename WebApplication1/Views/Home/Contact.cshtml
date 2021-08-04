@@ -1,0 +1,84 @@
+﻿
+@model ContactUS
+
+<section id="contact" class="contact ">
+    <div class="container">
+
+        <div class="section-title">
+            <h2>تواصل معنا</h2>
+            @*<p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>*@
+        </div>
+
+    </div>
+
+    <div>
+
+        <iframe style="border:0; width:100%;height:350px;" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d20261772.597636163!2d27.31589677414296!3d28.753580281416447!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14f7c95daafcf035%3A0x7421820c5e8cae42!2sTanta%2C%20Tanta%20Qism%202%2C%20Tanta%2C%20Gharbia%20Governorate%2C%20Egypt!5e0!3m2!1sen!2sbg!4v1617981285758!5m2!1sen!2sbg" allowfullscreen="" frameborder="0"></iframe>
+
+    </div>
+
+    <div class="container">
+
+        <div class="row mt-5">
+
+            <div class="col-lg-6">
+
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="info-box">
+                            <i class="bx bx-map"></i>
+                            <h3>موقعنا</h3>
+                            <p>الغربيه/طنطا / شارع بطرس</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="info-box mt-4">
+                            <i class="bx bx-envelope"></i>
+                            <h3>البريد الالكتروني</h3>
+                            <p>maged.aboelnasr@@yahoo.com<br>maged.aboelnasr@@gmail.com</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="info-box mt-4">
+                            <i class="bx bx-phone-call"></i>
+                            <h3>اتصل بنا</h3>
+                            <p>01203685857<br>0403313789</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="col-lg-6">
+                <form asp-action="SaveContact" role="form">
+                    <div class="form-row">
+                        <div class="col form-group">
+                            <input type="text" asp-for="Name" class="form-control" placeholder="Your Name">
+                            <span asp-validation-for="Name" class="text-danger"></span>
+                        </div>
+                        <div class="col form-group">
+                            <input type="email" class="form-control" asp-for="Email" placeholder="YourEmail">
+                            <span asp-validation-for="Email" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control" asp-for="Subject" placeholder="Subject">
+                        <span asp-validation-for="Subject" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <textarea class="form-control" asp-for="Message" rows="5" placeholder="Message"></textarea>
+                        <span asp-validation-for="Message" class="text-danger"></span>
+                    </div>
+                    <!--<div class="mb-3">
+                        <div class="loading">Loading</div>-->
+                    @*<div class="error-message"></div>*@
+                    <!--<div class="sent-message">Your message has been sent. Thank you!</div>
+                    </div>-->
+                    <div class="text-center"><button class="btn btn-info" type="submit">Send Message</button></div>
+                </form>
+            </div>
+
+        </div>
+
+    </div>
+</section>

@@ -1,0 +1,46 @@
+﻿
+@model List<ContactUS>
+
+
+    @*<table class="table table-bordered table-dark table-hover text-center mt-3 mb-4">
+        <tr class="bg-info"><th>Name</th><th>Email</th><th>Subject</th><th>Message</th></tr>
+        @foreach (var item in Model)
+        {
+            <tr><td>@item.Name</td><td>@item.Email</td><td>@item.Subject</td><td>@item.Message</td></tr>
+        }
+    </table>*@
+<section id="testimonials" class="testimonials">
+    <div class="container aos-init aos-animate" data-aos="fade-up">
+
+        <div class="section-title">
+            <h2>اراء المستخدمين</h2>
+        </div>
+
+        
+
+        <center>
+
+            @foreach (var item in Model)
+            {
+                <div class="owl-item cloned col-8" >
+                   
+                    <div class="testimonial-item">
+                        <p style="font-size:30px;">@item.Subject</p>
+                        <p>
+                            <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                            @item.Message
+                            <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                        </p>
+                        <img src="~/assets/img/testimonials/testimonials-3.jpg" class="testimonial-img" alt="">
+                        <h3>@item.Name</h3>
+                        <h4>@item.Email</h4>
+                    </div>
+                </div>
+                <hr />
+            }
+        </center>
+
+          
+        
+    </div>
+</section>
